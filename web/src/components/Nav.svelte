@@ -51,7 +51,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: #ee6262;
     display: block;
     bottom: -1px;
   }
