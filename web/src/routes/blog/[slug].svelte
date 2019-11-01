@@ -106,7 +106,6 @@
 </style>
 
 <svelte:head>
-
   <title>{post.title}</title>
 </svelte:head>
 
