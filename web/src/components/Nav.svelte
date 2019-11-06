@@ -16,6 +16,7 @@
   }
   nav {
     font-size: 1.5rem;
+    justify-self: end;
   }
   h1 {
     font-size: 5rem;
@@ -26,7 +27,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: end;
   }
 
   /* clearfix */

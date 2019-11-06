@@ -1,4 +1,5 @@
 <script context="module">
+  import prism from "prismjs";
   import blocksToHtml from "@sanity/block-content-to-html";
   import client from "../../sanityClient";
   import serializers from "../../components/serializers";
@@ -29,7 +30,7 @@
     const post = await client
       .fetch(query, { slug })
       .catch(err => this.error(500, err));
-    // console.log(post);
+
     return {
       post: {
         ...post,
@@ -63,7 +64,6 @@
   }
 
   .content :global(pre) {
-    background-color: #f9f9f9;
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
     padding: 0.5em;
     border-radius: 2px;
@@ -103,6 +103,13 @@
   .content :global(li) {
     margin: 0 0 0.5em 0;
   }
+
+  .main-image {
+    margin: 20px 0;
+    padding: 5px;
+    border: solid 4px white;
+    border-radius: 5px;
+  }
 </style>
 
 <svelte:head>
@@ -112,6 +119,10 @@
 <h1>{post.title}</h1>
 
 <div class="content">
-  <img src={urlFor(post.mainImage).url()} alt={post.mainImage.alt} />
+  <!-- {post.body} -->
+  <img
+    class="main-image"
+    src={urlFor(post.mainImage).url()}
+    alt={post.mainImage.alt} />
   {@html post.body}
 </div>
