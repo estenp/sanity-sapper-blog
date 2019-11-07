@@ -1,5 +1,4 @@
 <script context="module">
-  import prism from "prismjs";
   import blocksToHtml from "@sanity/block-content-to-html";
   import client from "../../sanityClient";
   import serializers from "../../components/serializers";
@@ -45,6 +44,13 @@
 </script>
 
 <script>
+  import Prism from "prismjs";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    Prism.highlightAll();
+  });
+
   export let post;
 </script>
 
@@ -56,7 +62,7 @@
 		going to appear inside the {{{post.html}}} block,
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
-	*/
+  */
 
   .content :global(h2) {
     font-size: 1.4em;
@@ -119,7 +125,6 @@
 <h1>{post.title}</h1>
 
 <div class="content">
-  <!-- {post.body} -->
   <img
     class="main-image"
     src={urlFor(post.mainImage).url()}

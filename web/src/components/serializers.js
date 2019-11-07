@@ -18,6 +18,6 @@ export default {
           .url()
       }),
     authorReference: ({node}) => h("b", {}, node.author.name),
-    code: ({node}) => h("pre", {"data-language": node.language, class: "language-" + node.language}, h("code", {}, node.code))
+    code: ({node}) => h("pre", {"data-language": node.language, className: "language-" + node.language}, h("code", {}, node.code))
   }
 };
