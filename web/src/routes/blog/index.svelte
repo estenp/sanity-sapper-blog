@@ -1,23 +1,33 @@
 <script context="module">
   import client from "../../sanityClient";
-  export function preload({ params, query }) {
-    return client
-      .fetch(
-        '*[_type == "post" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc)'
-      )
-      .then(posts => {
-        return { posts };
-      })
-      .catch(err => this.error(500, err));
+  export async function preload({ params, query }) {
+    return {
+      posts: await client
+        .fetch(
+          '*[_type == "post" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc)'
+        )
+        .then(posts => posts)
+        .catch(err => this.error(500, err)),
+
+      categories: await client
+        .fetch('*[_type == "category"]')
+        .then(categories => categories)
+    };
   }
 </script>
 
 <script>
+  import BlogCategorySelect from "../../components/BlogCategorySelect";
   export let posts;
+  export let categories;
 
   function formatDate(date) {
     return new Date(date).toLocaleDateString();
   }
+
+  const handleTagClick = event => {
+    alert(event.detail.id);
+  };
 </script>
 
 <style>
@@ -32,6 +42,7 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
+<BlogCategorySelect on:tagClick={handleTagClick} {categories} />
 
 <ul>
   {#each posts as post}

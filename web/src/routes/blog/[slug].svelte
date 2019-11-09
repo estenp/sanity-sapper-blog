@@ -44,6 +44,7 @@
 </script>
 
 <script>
+  // import BlogCategories from "../../components/";
   import Prism from "prismjs";
   import { onMount } from "svelte";
 
@@ -121,6 +122,14 @@
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
+
+<p>
+  <a href="/blog/">All Posts</a>
+  >
+  <span>{post.title}</span>
+</p>
+
+<!-- <BlogCategorySelect categories={post.categories}/> -->
 
 <h1>{post.title}</h1>
 
