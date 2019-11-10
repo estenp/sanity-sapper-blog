@@ -25,8 +25,18 @@
     return new Date(date).toLocaleDateString();
   }
 
+  let cats = categories.reduce((acc, c) => {
+    c.active = true;
+    return [...acc, c];
+  }, []);
+
+  const getCatObj = id => cats.find(c => c._id === id);
+
   const handleTagClick = event => {
-    alert(event.detail.id);
+    const id = event.detail.id;
+    const cat = getCatObj(id);
+    cat.active = !cat.active;
+    cats = cats;
   };
 </script>
 
@@ -42,7 +52,7 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
-<BlogCategorySelect on:tagClick={handleTagClick} {categories} />
+<BlogCategorySelect on:tagClick={handleTagClick} categories={cats} />
 
 <ul>
   {#each posts as post}
