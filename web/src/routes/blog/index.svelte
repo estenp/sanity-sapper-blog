@@ -63,7 +63,7 @@
 				waiting for the 'click' event -->
     <li>
       <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
-      ({formatDate(post.publishedAt)}) {JSON.stringify(post.categories)}
+      ({formatDate(post.publishedAt)})
     </li>
   {/each}
 </ul>

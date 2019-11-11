@@ -1,12 +1,13 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
   export let categories;
 
-  // activeTags is now reactive, meaning anytime categories changes, activeTags will be updated
+  // FN: creates an array of category id's for currently active tags
   const getActiveTags = categories =>
     categories.filter(c => c.active === true).map(c => c._id);
 
-  const dispatch = createEventDispatcher();
+  // FN: sends an event to the component's parent component
   const dispatchActiveTags = categories => {
     dispatch("tagClick", { activeTags: getActiveTags(categories) });
   };
@@ -16,16 +17,15 @@
     return [...acc, c];
   }, []);
 
-  const getCatObj = id => cats.find(c => c._id === id);
+  // FN: get the data for a category by it's Id
+  const getCategoryObj = id => cats.find(c => c._id === id);
 
   const handleTagClick = id => {
-    const cat = getCatObj(id);
+    const cat = getCategoryObj(id);
     cat.active = !cat.active;
     categories = categories;
     dispatchActiveTags(categories);
   };
-
-  // console.log(categories);
 </script>
 
 <style>
@@ -40,14 +40,14 @@
   .tag:hover {
     cursor: pointer;
     background: none;
-    border: solid 2px tomato;
+    border: solid 2px #ee6262;
     border-radius: 5px;
     padding: 8px;
   }
   .tag.active {
     border: solid 2px white;
     color: white;
-    background: palevioletred;
+    background: #ee6262;
   }
 </style>
 
