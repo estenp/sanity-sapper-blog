@@ -21,22 +21,20 @@
   export let posts;
   export let categories;
 
-  function formatDate(date) {
+  const formatDate = date => {
     return new Date(date).toLocaleDateString();
-  }
+  };
 
-  let cats = categories.reduce((acc, c) => {
-    c.active = true;
-    return [...acc, c];
-  }, []);
+  let filteredPosts = posts;
 
-  const getCatObj = id => cats.find(c => c._id === id);
-
-  const handleTagClick = event => {
-    const id = event.detail.id;
-    const cat = getCatObj(id);
-    cat.active = !cat.active;
-    cats = cats;
+  const filterPosts = event => {
+    const activeCats = event.detail.activeCats;
+    // return posts where at least one of the post's categories is included in currently active tags
+    filteredPosts = posts.filter(post => {
+      // take array of category objects and make array of only id references
+      const postCatIds = post.categories.map(catObj => catObj._ref);
+      return postCatIds.some(id => activeCats.includes(id));
+    });
   };
 </script>
 
@@ -52,17 +50,17 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
-<BlogCategorySelect on:tagClick={handleTagClick} categories={cats} />
+<BlogCategorySelect on:tagClick={filterPosts} {categories} />
 
 <ul>
-  {#each posts as post}
+  {#each filteredPosts as post}
     <!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
     <li>
       <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
-      ({formatDate(post.publishedAt)})
+      ({formatDate(post.publishedAt)}) {JSON.stringify(post.categories)}
     </li>
   {/each}
 </ul>

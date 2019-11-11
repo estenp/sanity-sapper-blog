@@ -1,10 +1,31 @@
 <script>
   import { createEventDispatcher } from "svelte";
   export let categories;
-  const dispatch = createEventDispatcher();
-  const dispatchClick = id => dispatch("tagClick", { id: id });
 
-  console.log(categories);
+  // activeCats is now reactive, meaning anytime categories changes, activeCats will be updated
+  const getActiveCats = categories =>
+    categories.filter(c => c.active === true).map(c => c._id);
+
+  const dispatch = createEventDispatcher();
+  const dispatchActiveCats = categories => {
+    dispatch("tagClick", { activeCats: getActiveCats(categories) });
+  };
+
+  let cats = categories.reduce((acc, c) => {
+    c.active = true;
+    return [...acc, c];
+  }, []);
+
+  const getCatObj = id => cats.find(c => c._id === id);
+
+  const handleTagClick = id => {
+    const cat = getCatObj(id);
+    cat.active = !cat.active;
+    categories = categories;
+    dispatchActiveCats(categories);
+  };
+
+  // console.log(categories);
 </script>
 
 <style>
@@ -33,7 +54,7 @@
 <div id="catsContainer">
   {#each categories as cat}
     <button
-      on:click={() => dispatchClick(cat._id)}
+      on:click={() => handleTagClick(cat._id)}
       class="tag {cat.active ? 'active' : ''}">
       {cat.title}
     </button>
