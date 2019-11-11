@@ -25,16 +25,19 @@
     return new Date(date).toLocaleDateString();
   };
 
+  const filterPostsByTags = activeTags => post => {
+    // take array of a post's category objects and make array of only id references
+    const postCatIds = post.categories.map(catObj => catObj._ref);
+    // return true if at least one of the post's categories matches an active tag
+    return postCatIds.some(id => activeTags.includes(id));
+  };
+
   let filteredPosts = posts;
 
   const filterPosts = event => {
-    const activeCats = event.detail.activeCats;
+    const activeTags = event.detail.activeTags;
     // return posts where at least one of the post's categories is included in currently active tags
-    filteredPosts = posts.filter(post => {
-      // take array of category objects and make array of only id references
-      const postCatIds = post.categories.map(catObj => catObj._ref);
-      return postCatIds.some(id => activeCats.includes(id));
-    });
+    filteredPosts = posts.filter(filterPostsByTags(activeTags));
   };
 </script>
 

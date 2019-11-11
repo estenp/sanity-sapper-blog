@@ -2,13 +2,13 @@
   import { createEventDispatcher } from "svelte";
   export let categories;
 
-  // activeCats is now reactive, meaning anytime categories changes, activeCats will be updated
-  const getActiveCats = categories =>
+  // activeTags is now reactive, meaning anytime categories changes, activeTags will be updated
+  const getActiveTags = categories =>
     categories.filter(c => c.active === true).map(c => c._id);
 
   const dispatch = createEventDispatcher();
-  const dispatchActiveCats = categories => {
-    dispatch("tagClick", { activeCats: getActiveCats(categories) });
+  const dispatchActiveTags = categories => {
+    dispatch("tagClick", { activeTags: getActiveTags(categories) });
   };
 
   let cats = categories.reduce((acc, c) => {
@@ -22,7 +22,7 @@
     const cat = getCatObj(id);
     cat.active = !cat.active;
     categories = categories;
-    dispatchActiveCats(categories);
+    dispatchActiveTags(categories);
   };
 
   // console.log(categories);
