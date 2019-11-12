@@ -48,8 +48,9 @@
   .col > div {
     margin-bottom: 10px;
     padding: 10px;
-    border: solid 4px white;
+    border: solid 4px #ee6262;
     border-radius: 5px;
+    background: #fff;
   }
 
   #recent-blog-post {
@@ -66,7 +67,7 @@
   }
   #recent-blog-post a {
     text-align: right;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .portfolio-slot {
