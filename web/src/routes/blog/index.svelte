@@ -53,6 +53,7 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
+<!-- should the tag select contain the output post links? -->
 <BlogCategorySelect on:tagClick={filterPosts} {categories} />
 
 <ul>
