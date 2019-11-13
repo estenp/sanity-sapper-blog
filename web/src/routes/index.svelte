@@ -58,7 +58,7 @@
     /* background: white; */
   }
 
-  #recent-blog-post img {
+  .col img {
     width: 100%;
   }
 
@@ -71,7 +71,7 @@
   }
 
   .portfolio-slot {
-    background: white;
+    /* background: #bbb; */
     /* min-height: 200px; */
   }
 
@@ -108,24 +108,55 @@
     </div>
     <div class="portfolio-slot">
       <div>
-        <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
+        <img
+          src="cfilogo.png"
+          alt="Custom Fabricating Industries logo"
+          style="width: 25%" />
+      </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
+      </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
+      </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
+      </div>
+    </div>
+
+    <div class="portfolio-slot">
+      <div>
+        <img src="ironworks.jpg" alt="Iron Works" />
       </div>
     </div>
   </div>
+
   <div class="col">
     <div class="portfolio-slot">
       <div>
-        <img src="head.png" alt="estenpatrick.com logo" />
+        <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
+      </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="beach.jpg" alt="Beach in Oregon" />
+      </div>
+    </div>
+
+    <div class="portfolio-slot">
+      <div>
+        <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
       </div>
     </div>
     <div class="portfolio-slot">
       <div>
         <img src="dispensio.png" alt="dispensio" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="dicetronlogo.png" alt="DiceTron logo" />
       </div>
     </div>
 
