@@ -17,6 +17,8 @@
 </script>
 
 <script>
+  import { transition, fly, fade } from "svelte/transition";
+  import RouteTransition from "../../components/RouteTransition";
   import BlogCategorySelect from "../../components/BlogCategorySelect";
   export let posts;
   export let categories;
@@ -42,29 +44,30 @@
 </script>
 
 <style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
+  li a {
+    margin-left: 0.3rem;
   }
 </style>
 
 <svelte:head>
   <title>Blog</title>
 </svelte:head>
+<RouteTransition>
+  <h1>Recent posts</h1>
+  <!-- should the tag select contain the output post links? -->
+  <BlogCategorySelect on:tagClick={filterPosts} {categories} />
 
-<h1>Recent posts</h1>
-<!-- should the tag select contain the output post links? -->
-<BlogCategorySelect on:tagClick={filterPosts} {categories} />
-
-<ul>
-  {#each filteredPosts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
+  <ul>
+    {#each filteredPosts as post}
+      <!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-    <li>
-      <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
-      ({formatDate(post.publishedAt)})
-    </li>
-  {/each}
-</ul>
+      <li out:fly={{ y: 100, duration: 300 }}>
+        {formatDate(post.publishedAt)} |
+        <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
+
+      </li>
+    {/each}
+  </ul>
+</RouteTransition>

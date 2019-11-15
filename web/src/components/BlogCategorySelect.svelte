@@ -55,7 +55,8 @@
   {#each categories as cat}
     <button
       on:click={() => handleTagClick(cat._id)}
-      class="tag {cat.active ? 'active' : ''}">
+      class="tag"
+      class:active={cat.active}>
       {cat.title}
     </button>
   {/each}

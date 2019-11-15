@@ -1,4 +1,5 @@
 <script>
+  import RouteTransition from "../components/RouteTransition";
   import Nav from "../components/Nav.svelte";
 
   export let segment;
@@ -15,7 +16,8 @@
 </style>
 
 <Nav {segment} />
-
 <main>
+
   <slot />
+
 </main>

@@ -1,11 +1,75 @@
+@font-face {
+  font-family: Fira;
+  src: local("./fonts/FiraCode-Regular.woff"), url("./fonts/FiraCode-Regular.woff") format("woff");
+}
+
+/* Default */
+.plain {
+  color: #abb2bf;
+}
+
+/* Background */
+.background {
+  background: #282c34;
+}
+
+/* Caret */
+.caret {
+  color: #528bff;
+}
+
+/* Function params */
+.pink {
+  color: #e06c75;
+}
+
+/* Class name Identifiers, */
+.cyan {
+  color: #56b6c2;
+}
+
+/* String */
+.lime {
+  color: #98c379;
+}
+
+/* Keywords */
+.purple {
+  color: #c678dd;
+}
+
+/* Numbers, Constants, Markup attributes */
+.brown {
+  color: #d19a66;
+}
+
+/* Class name, Namespaces */
+.gold {
+  color: #e5c07b;
+}
+
+/* Method definitions, Function names */
+.blue {
+  color: #61afef;
+}
+
+.red {
+  color: #e06c75;
+}
+
+/* Comments */
+.comment {
+  color: #5c6370;
+}
+
 body {
   margin: 0;
   font-family: Open Sans, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 
-  background: #fff5e1;
-  color: #666565;
+  background: #282c34;
+  color: #eee;
 }
 
 h1,
@@ -25,6 +89,16 @@ h1 {
 
 a {
   color: inherit;
+}
+
+ul {
+  margin: 0 0 1em 0;
+  line-height: 1.5;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 code {

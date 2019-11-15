@@ -32,6 +32,7 @@
 </script>
 
 <script>
+  import RouteTransition from "../components/RouteTransition";
   export let data;
 </script>
 
@@ -39,7 +40,10 @@
   <title>About</title>
 </svelte:head>
 
-<h1>About Me</h1>
-<h3>{data.name}</h3>
+<RouteTransition>
 
-{@html data.bio}
+  <h1>About Me</h1>
+  <h3>{data.name}</h3>
+
+  {@html data.bio}
+</RouteTransition>

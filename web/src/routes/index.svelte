@@ -30,6 +30,7 @@
 </script>
 
 <script>
+  import RouteTransition from "../components/RouteTransition";
   import urlFor from "../lib/urlFor";
   export let post;
   console.log(post);
@@ -64,10 +65,14 @@
 
   #recent-blog-post h2 {
     text-align: center;
+    border-bottom: solid 2px #ee6262;
+    padding-bottom: 0.3rem;
+    font-family: Pirata One;
   }
   #recent-blog-post a {
     text-align: right;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    display: block;
   }
 
   .portfolio-slot {
@@ -90,81 +95,84 @@
 <svelte:head>
   <title>Esten Patrick</title>
 </svelte:head>
+<RouteTransition>
+  <section class="container">
+    <div class="col">
+      <div id="recent-blog-post">
+        <article>
+          <h2>{post.title}</h2>
 
-<section class="container">
-  <div class="col">
-    <div id="recent-blog-post">
-      <article>
-        <h2>{post.title}</h2>
+          <img
+            src={urlFor(post.mainImage).width(500)}
+            alt={post.mainImage.alt} />
+          <section>
+            {@html post.excerpt}
+            <a rel="prefetch" href="blog/{post.slug.current}">
+              Read: {post.title}
+            </a>
+          </section>
+        </article>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img
+            src="cfilogo.png"
+            alt="Custom Fabricating Industries logo"
+            style="width: 25%" />
+        </div>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
+        </div>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
+        </div>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
+        </div>
+      </div>
 
-        <img src={urlFor(post.mainImage).width(500)} alt={post.mainImage.alt} />
-        <section>
-          {@html post.excerpt}
-          <a rel="prefetch" href="blog/{post.slug.current}">
-            Continue reading: {post.title}
-          </a>
-        </section>
-      </article>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img
-          src="cfilogo.png"
-          alt="Custom Fabricating Industries logo"
-          style="width: 25%" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
-      </div>
-    </div>
-
-    <div class="portfolio-slot">
-      <div>
-        <img src="ironworks.jpg" alt="Iron Works" />
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="portfolio-slot">
-      <div>
-        <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="beach.jpg" alt="Beach in Oregon" />
-      </div>
     </div>
 
-    <div class="portfolio-slot">
-      <div>
-        <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
+    <div class="col">
+      <div class="portfolio-slot">
+        <div>
+          <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
+        </div>
       </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
-        <img src="dispensio.png" alt="dispensio" />
+      <div class="portfolio-slot">
+        <div>
+          <img src="beach.jpg" alt="Beach in Oregon" />
+        </div>
       </div>
-    </div>
 
-  </div>
-  <!-- <strong>
+      <div class="portfolio-slot">
+        <div>
+          <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
+        </div>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img src="dispensio.png" alt="dispensio" />
+        </div>
+      </div>
+      <div class="portfolio-slot">
+        <div>
+          <img src="ironworks.jpg" alt="Iron Works" />
+        </div>
+      </div>
+
+    </div>
+    <!-- <strong>
     Go to
     <a href="/blog">/blog</a>
     to see content loaded from
     <a href="https://www.sanity.io">Sanity</a>
   </strong> -->
-</section>
+  </section>
+</RouteTransition>
