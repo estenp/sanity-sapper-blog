@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @font-face {
   font-family: Fira;
   src: local("./fonts/FiraCode-Regular.woff"), url("./fonts/FiraCode-Regular.woff") format("woff");
@@ -5,7 +7,7 @@
 
 /* Default */
 .plain {
-  color: #abb2bf;
+  color: $plain;
 }
 
 /* Background */
@@ -68,8 +70,9 @@ body {
   font-size: 14px;
   line-height: 1.5;
 
-  background: #282c34;
-  color: #eee;
+  background: $background;
+  // color: #eee;
+  color: $plain;
 }
 
 h1,

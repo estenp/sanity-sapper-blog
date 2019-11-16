@@ -2,7 +2,8 @@
   export let segment;
 </script>
 
-<style>
+<style lang="scss">
+  @import "../../global.scss";
   header {
     border-bottom: 2px solid coral;
     font-weight: 300;

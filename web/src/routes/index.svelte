@@ -33,7 +33,7 @@
   import RouteTransition from "../components/RouteTransition";
   import urlFor from "../lib/urlFor";
   export let post;
-  console.log(post);
+  // console.log(post);
 </script>
 
 <style>
