@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss" global>
-  @import "../global.scss";
+  @import "../../global.scss";
   main {
     position: relative;
     width: 75%;

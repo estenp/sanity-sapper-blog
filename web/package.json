@@ -28,6 +28,7 @@
     "svelte": "^3.4.2",
     "svelte-loader": "^2.13.4",
     "node-sass": "^4.13.0",
-    "svelte-preprocess": "^3.2.6"
+    "svelte-preprocess": "^3.2.6",
+    "webpack": "^4.32.0"
   }
 }
