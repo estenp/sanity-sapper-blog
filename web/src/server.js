@@ -11,3 +11,27 @@ polka() // You can also use Express
   .listen(PORT, err => {
     if (err) console.log("error", err);
   });
+
+/* import sveltePreprocess from "svelte-preprocess";
+
+const preprocess = sveltePreprocess({
+  scss: true
+  // ...
+});
+
+export default {
+  client: {
+    plugins: [
+      svelte({
+        sveltePreprocess()
+      })
+    ]
+  },
+  server: {
+    plugins: [
+      svelte({
+        sveltePreprocess()
+      })
+    ]
+  }
+}; */
