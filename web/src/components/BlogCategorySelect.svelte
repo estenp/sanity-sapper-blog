@@ -1,8 +1,17 @@
 <script>
   import { fade } from "svelte/transition";
+  import { tweened } from "svelte/motion";
+  import { cubicOut } from "svelte/easing";
+  // import { interpolateLab } from "d3-interpolate";
+
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
   export let categories;
+
+  // let tween = tweened(categories.active, {
+  //   duration: 400
+  //   // interpolate: interpolateLab
+  // });
 
   // FN: creates an array of category id's for currently active tags
   const getActiveTags = categories =>

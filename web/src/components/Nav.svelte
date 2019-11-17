@@ -1,5 +1,15 @@
 <script>
+  import { fade, transition } from "svelte/transition";
+  import { tweened } from "svelte/motion";
+  import { cubicOut } from "svelte/easing";
+
   export let segment;
+  let segmentTween = tweened(0, {
+    duration: 400,
+    easing: cubicOut
+  });
+
+  segmentTween.set(segment);
 </script>
 
 <style lang="scss">
@@ -110,6 +120,8 @@
     </ul>
     <span class="plain">)</span>
     <span class="cyan operator">&nbsp;=>&nbsp;</span>
-    <span class="plain">{segment ? segment : 'home'}</span>
+    <span class="plain" in:fade={{ duration: 300 }}>
+      {segment ? segment : 'home'}
+    </span>
   </nav>
 </header>

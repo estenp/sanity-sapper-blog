@@ -53,7 +53,11 @@
   <title>Blog</title>
 </svelte:head>
 <RouteTransition>
-  <h1>Recent posts</h1>
+  <h1 class="tag-header">
+    &lt;
+    <span class="red">Recent Posts</span>
+    &gt;
+  </h1>
   <!-- should the tag select contain the output post links? -->
   <BlogCategorySelect on:tagClick={filterPosts} {categories} />
 

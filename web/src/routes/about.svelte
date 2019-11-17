@@ -16,7 +16,7 @@
     const authorData = await client
       .fetch(query)
       .catch(err => this.error(500, err));
-    console.log(authorData);
+    // console.log(authorData);
 
     return {
       data: {
@@ -47,7 +47,7 @@
     <span class="red">About Me</span>
     &gt;
   </h1>
-  <div class="page-content">
+  <div class="border-left">
     <h3>{data.name}</h3>
 
     {@html data.bio}

@@ -20,14 +20,14 @@
     }
   }
 
-  .page-content {
-    padding-left: 2rem;
+  .slot-container {
+    padding-bottom: 4rem;
   }
 </style>
 
 <Nav {segment} />
 <main class="border-left">
-  <div class="border-left">
+  <div class="slot-container border-left">
     <slot />
   </div>
 </main>
