@@ -11,21 +11,22 @@
     align-items: center;
     /* grid-template-columns: auto auto; */
     /* color: #ee6262; */
-    font-family: "Pirata One", cursive;
+    /*font-family: "Pirata One", cursive; 
     font-family: Bungee Shade;
     font-family: "Nova Square";
-    font-family: Averia Serif Libre;
+    font-family: Averia Serif Libre; */
     font-family: "Fira Code";
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   nav {
     margin-left: 4rem;
     font-size: 1.5rem;
     justify-self: start;
     display: flex;
-    margin-bottom: 1rem;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
   }
 
@@ -77,6 +78,7 @@
 <header>
 
   <a href=".">
+    <span style="display: inline">const</span>
     <h1 class="lime">
       Esten Patrick
       <span class="red operator">=</span>
