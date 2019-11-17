@@ -15,7 +15,7 @@
     font-family: Bungee Shade;
     font-family: "Nova Square";
     font-family: Averia Serif Libre;
-    font-family: Fira;
+    font-family: "Fira Code";
   }
   nav {
     margin-left: 4rem;

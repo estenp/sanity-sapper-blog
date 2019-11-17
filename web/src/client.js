@@ -1,10 +1,4 @@
 import * as sapper from "@sapper/app";
-import sveltePreprocess from "svelte-preprocess";
-
-const preprocess = sveltePreprocess({
-  scss: true
-  // ...
-});
 
 sapper.start({
   target: document.querySelector("#sapper")

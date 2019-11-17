@@ -1,7 +1,9 @@
 const webpack = require("webpack");
+// const {aliases, scssAliases, onwarn} = require("./webpack.parts");
+
 const config = require("sapper/config/webpack.js");
 const pkg = require("./package.json");
-const sveltePreprocess = require("svelte-preprocess");
+// const sveltePreprocess = require("svelte-preprocess");
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
