@@ -88,7 +88,7 @@
     top: 0;
     position: absolute;
     right: 0;
-    background: #ff3e00;
+    background: #dd3701;
     color: #fff;
     padding: 2px;
     border-radius: 2px;

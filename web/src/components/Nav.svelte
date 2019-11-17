@@ -12,7 +12,7 @@
     align-items: center;
     /* grid-template-columns: auto auto; */
     /* color: #ee6262; */
-    /*font-family: "Pirata One", cursive; 
+    /*font-family: "Pirata One", cursive;
     font-family: Bungee Shade;
     font-family: "Nova Square";
     font-family: Averia Serif Libre; */
@@ -66,22 +66,21 @@
 
   a {
     text-decoration: none;
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
     display: block;
   }
 
   .operator {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    display: inline;
   }
 </style>
 
 <header>
 
   <a href=".">
-    <span style="display: inline">const</span>
     <h1 class="lime">
-      Esten Patrick
+      <span class="cyan">const</span>
+      EstenPatrick
       <span class="red operator">=</span>
     </h1>
 
@@ -92,11 +91,11 @@
       <li class="brown">
         <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
       </li>
-      <span class="plain">,</span>
+      <span class="plain">,&nbsp;</span>
       <li class="brown">
         <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
       </li>
-      <span class="plain">,</span>
+      <span class="plain">,&nbsp;</span>
       <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
       <li class="brown">
@@ -109,7 +108,7 @@
       </li>
     </ul>
     <span class="plain">)</span>
-    <span class="cyan operator">=></span>
+    <span class="cyan operator">&nbsp;=>&nbsp;</span>
     <span class="plain">{segment ? segment : 'home'}</span>
   </nav>
 </header>

@@ -52,7 +52,7 @@
     padding: 10px;
     border: solid 4px $red;
     border-radius: 5px;
-    background: #fff;
+    // background: #fff;
   }
 
   #recent-blog-post {
@@ -68,17 +68,12 @@
     text-align: center;
     border-bottom: solid 2px $red;
     padding-bottom: 0.3rem;
-    font-family: Pirata One;
+    font-family: "Fira Code";
   }
   #recent-blog-post a {
     text-align: right;
     font-size: 1.1rem;
     display: block;
-  }
-
-  .portfolio-slot {
-    /* background: #bbb; */
-    /* min-height: 200px; */
   }
 
   .portfolio-slot > div {
