@@ -36,7 +36,8 @@
   // console.log(post);
 </script>
 
-<style>
+<style lang="scss">
+  @import "../../static/variables.scss";
   section.container {
     /* width: 75%; */
     margin: 0 auto;
@@ -49,7 +50,7 @@
   .col > div {
     margin-bottom: 10px;
     padding: 10px;
-    border: solid 4px #ee6262;
+    border: solid 4px $red;
     border-radius: 5px;
     background: #fff;
   }
@@ -65,7 +66,7 @@
 
   #recent-blog-post h2 {
     text-align: center;
-    border-bottom: solid 2px #ee6262;
+    border-bottom: solid 2px $red;
     padding-bottom: 0.3rem;
     font-family: Pirata One;
   }

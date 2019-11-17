@@ -3,8 +3,9 @@
 </script>
 
 <style lang="scss">
+  @import "../../static/variables.scss";
   header {
-    border-bottom: 2px solid coral;
+    border-bottom: 2px solid $brown;
     font-weight: 300;
     padding: 0 5em;
     /* display: grid; */
@@ -58,7 +59,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: #ee6262;
+    background-color: $red;
     display: block;
     bottom: -1px;
   }

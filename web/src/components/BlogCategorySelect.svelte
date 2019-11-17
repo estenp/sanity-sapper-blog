@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
   export let categories;
@@ -28,7 +29,8 @@
   };
 </script>
 
-<style>
+<style lang="scss">
+  @import "../../static/variables.scss";
   #catsContainer {
     display: inline-flex;
     width: 50%;
@@ -40,14 +42,15 @@
   .tag:hover {
     cursor: pointer;
     background: none;
-    border: solid 2px #ee6262;
+    border: solid 2px $red;
     border-radius: 5px;
     padding: 8px;
+    color: $plain;
   }
   .tag.active {
     border: solid 2px white;
     color: white;
-    background: #ee6262;
+    background: $red;
   }
 </style>
 

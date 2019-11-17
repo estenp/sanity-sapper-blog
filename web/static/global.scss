@@ -12,56 +12,56 @@
 
 /* Background */
 .background {
-  background: #282c34;
+  background: $background;
 }
 
 /* Caret */
 .caret {
-  color: #528bff;
+  color: $caret;
 }
 
 /* Function params */
 .pink {
-  color: #e06c75;
+  color: $pink;
 }
 
 /* Class name Identifiers, */
 .cyan {
-  color: #56b6c2;
+  color: $cyan;
 }
 
 /* String */
 .lime {
-  color: #98c379;
+  color: $lime;
 }
 
 /* Keywords */
 .purple {
-  color: #c678dd;
+  color: $purple;
 }
 
 /* Numbers, Constants, Markup attributes */
 .brown {
-  color: #d19a66;
+  color: $brown;
 }
 
 /* Class name, Namespaces */
 .gold {
-  color: #e5c07b;
+  color: $gold;
 }
 
 /* Method definitions, Function names */
 .blue {
-  color: #61afef;
+  color: $blue;
 }
 
 .red {
-  color: #e06c75;
+  color: $red;
 }
 
 /* Comments */
 .comment {
-  color: #5c6370;
+  color: $commentGray;
 }
 
 body {
