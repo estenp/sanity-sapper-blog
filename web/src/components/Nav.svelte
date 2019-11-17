@@ -54,7 +54,7 @@
     display: inline-block;
   }
 
-  .selected::after {
+  /* .selected::after {
     position: absolute;
     content: "";
     width: calc(100% - 1em);
@@ -62,7 +62,7 @@
     background-color: $red;
     display: block;
     bottom: -1px;
-  }
+  } */
 
   a {
     text-decoration: none;

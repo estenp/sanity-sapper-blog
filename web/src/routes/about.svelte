@@ -42,7 +42,11 @@
 
 <RouteTransition>
 
-  <h1>About Me</h1>
+  <h1>
+    &lt;
+    <span>About Me</span>
+    &gt;
+  </h1>
   <h3>{data.name}</h3>
 
   {@html data.bio}
