@@ -42,12 +42,14 @@
 
 <RouteTransition>
 
-  <h1>
+  <h1 class="tag-header">
     &lt;
-    <span>About Me</span>
+    <span class="red">About Me</span>
     &gt;
   </h1>
-  <h3>{data.name}</h3>
+  <div class="page-content">
+    <h3>{data.name}</h3>
 
-  {@html data.bio}
+    {@html data.bio}
+  </div>
 </RouteTransition>

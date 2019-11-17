@@ -10,15 +10,24 @@
   main {
     position: relative;
     width: 75%;
-    padding: 2em;
+    // padding: 2em;
     margin: 0 auto;
+    margin-left: 5rem;
     box-sizing: border-box;
+
+    > div {
+      padding-top: 4rem;
+    }
+  }
+
+  .page-content {
+    padding-left: 2rem;
   }
 </style>
 
 <Nav {segment} />
-<main>
-
-  <slot />
-
+<main class="border-left">
+  <div class="border-left">
+    <slot />
+  </div>
 </main>

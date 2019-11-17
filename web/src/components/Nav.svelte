@@ -5,7 +5,7 @@
 <style lang="scss">
   @import "../../static/variables.scss";
   header {
-    border-bottom: 2px solid $brown;
+    // border-bottom: 2px solid $brown;
     font-weight: 300;
     padding: 0 5em;
     /* display: grid; */
@@ -18,10 +18,11 @@
     font-family: Averia Serif Libre; */
     font-family: "Fira Code";
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
   }
   nav {
-    margin-left: 4rem;
+    padding-left: 4rem;
+    border-left: solid 1px rgb(107, 107, 107);
     font-size: 1.5rem;
     justify-self: start;
     display: flex;

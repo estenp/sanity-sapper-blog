@@ -91,6 +91,11 @@ h1 {
   color: $cyan;
 }
 
+h1.tag-header span {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
 h2 {
   font-size: 1.3rem;
 }
@@ -116,6 +121,11 @@ code {
   background-color: #f0f0f0;
   padding: 0.2em 0.4em;
   border-radius: 2px;
+}
+
+.border-left {
+  padding-left: 4rem;
+  border-left: solid 1px rgb(107, 107, 107);
 }
 
 @media (min-width: 400px) {
