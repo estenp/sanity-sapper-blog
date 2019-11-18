@@ -61,13 +61,13 @@
   <!-- should the tag select contain the output post links? -->
   <BlogCategorySelect on:tagClick={filterPosts} {categories} />
 
-  <ul>
+  <ul class="border-left">
     {#each filteredPosts as post}
       <!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-      <li out:fly|local={{ y: 100, duration: 300 }}>
+      <li in:fade out:fly|local={{ y: 100, duration: 300 }}>
         {formatDate(post.publishedAt)} |
         <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
 

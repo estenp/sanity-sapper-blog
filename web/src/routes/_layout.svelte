@@ -14,7 +14,7 @@
     margin: 0 auto;
     margin-left: 5rem;
     box-sizing: border-box;
-
+    min-height: 85vh;
     > div {
       padding-top: 4rem;
     }
