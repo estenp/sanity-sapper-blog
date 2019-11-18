@@ -33,6 +33,7 @@
 
 <script>
   import RouteTransition from "../components/RouteTransition";
+  import Prism from "prismjs";
   export let data;
 </script>
 
@@ -48,8 +49,26 @@
     &gt;
   </h1>
   <div class="border-left">
-    <h3>{data.name}</h3>
+    <!-- <h3>{data.name}</h3> -->
 
-    {@html data.bio}
+    <!-- {@html data.bio} -->
+    <div class="content">
+    <!-- class="language-javascript" -->
+    <pre >
+    <code>
+    const me = &#123;
+      🙃 web developer: [
+        'Javascript', 'HTML', 'CSS', 'Angular', 'React', 'Svelte', 'JAMStack'
+      ],
+      🎵 music: [
+        'hip hop', 'black metal', 'midwest emo', 'acoustic', 'indie'
+      ],
+      cereal: ['Golden Grahams', 'Life', 'Frosted Flakes', "Oh's"]
+      hobbies: ['code', 'sports', 'games', 'art', 'music', 'kendama']
+      🏙️ Chicago
+    &#125;
+    </code>
+    </pre>
+    </div>
   </div>
 </RouteTransition>

@@ -67,7 +67,10 @@
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-      <li in:fade out:fly|local={{ y: 100, duration: 300 }}>
+      <!-- in:fade  -->
+      <li
+      in:fly|local={{ y: 100, duration: 300 }}
+      out:fly|local={{ y: 100, duration: 300 }}>
         {formatDate(post.publishedAt)} |
         <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
 

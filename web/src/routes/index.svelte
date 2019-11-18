@@ -111,10 +111,11 @@
       </div>
       <div class="portfolio-slot">
         <div>
-          <img
-            src="cfilogo.png"
-            alt="Custom Fabricating Industries logo"
-            style="width: 25%" />
+          <a href="http://www.cfishades.com" target="_blank">
+            <img
+              src="cfilogo.png"
+              alt="Custom Fabricating Industries logo" />
+          </a>
         </div>
       </div>
       <div class="portfolio-slot">
@@ -154,7 +155,9 @@
       </div>
       <div class="portfolio-slot">
         <div>
-          <img src="dispensio.png" alt="dispensio" />
+          <a href="https://dispensio.netlify.com/" target="_blank">
+            <img src="dispensio.png" alt="dispensio" />
+          </a>
         </div>
       </div>
       <div class="portfolio-slot">
