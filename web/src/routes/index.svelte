@@ -41,13 +41,15 @@
   section.container {
     /* width: 75%; */
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr [first] 1fr [second];
-    grid-column-gap: 10px;
+    // display: grid;
+    // grid-template-columns: 1fr [first] 1fr [second];
+    // grid-column-gap: 10px;
     min-height: 300px;
+    column-count: 2;
+    column-gap: 1rem;
   }
 
-  .col > div {
+  section > div {
     margin-bottom: 10px;
     padding: 10px;
     border: solid 4px $red;
@@ -58,6 +60,9 @@
   #recent-blog-post {
     min-height: 200px;
     /* background: white; */
+    img {
+      width: 100%;
+    }
   }
 
   .col img {
@@ -75,6 +80,12 @@
     font-size: 1.1rem;
     display: block;
   }
+
+  // .portfolio-slot {
+  //   float:left;
+  //   margin-right: 1rem;
+  // }
+
   .portfolio-slot img {
     width: 100%;
     transition: width 300ms ease-in-out;
@@ -87,7 +98,8 @@
 
 
   .portfolio-slot:hover img{
-    width: 115%;
+    width: 98%;
+    height: 98%;
 
   }
 
@@ -103,7 +115,7 @@
 </svelte:head>
 <RouteTransition>
   <section class="container">
-    <div class="col">
+    <!-- <div class="col"> -->
       <div id="recent-blog-post">
         <article>
           <h2>{post.title}</h2>
@@ -142,9 +154,9 @@
         </div>
       </div>
 
-    </div>
+    <!-- </div>
 
-    <div class="col">
+    <div class="col"> -->
       <div class="portfolio-slot">
         <div>
           <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
@@ -174,7 +186,7 @@
         </div>
       </div>
 
-    </div>
+    <!-- </div> -->
     <!-- <strong>
     Go to
     <a href="/blog">/blog</a>

@@ -38,6 +38,12 @@
 
 </script>
 
+<style>
+  pre {
+    font-size: 1.3rem;
+  }
+</style>
+
 <svelte:head>
   <title>About</title>
 </svelte:head>
@@ -58,20 +64,20 @@
     <pre >
     <code class="plain">
     <span class="cyan">const</span> <span class="blue">me</span> <span class="red"> = </span> &#123;
-      🏙️  location: <span class="gold">'Chicago'</span>
-      🙃  web developer: [
-        <span class="gold">'Javascript'</span>, <span class="gold">'HTML'</span>, <span class="gold">'CSS'</span>, <span class="gold">'Angular'</span>, <span class="gold">'React'</span>, <span class="gold">'Svelte'</span>, <span class="gold">'JAMStack'</span>
-      ],
-      🎵  music: [
-        <span class="gold">'hip hop'</span>, <span class="gold">'black metal'</span>, <span class="gold">'midwest emo'</span>, <span class="gold">'acoustic'</span>, <span class="gold">'indie'</span>
-      ],
-      🥣 cereal: [
-        <span class="gold">'Golden Grahams'</span>, <span class="gold">'Life'</span>, <span class="gold">'Frosted Flakes'</span>, <span class="gold">"Oh's"</span>
-      ]
-      hobbies: [
-        <span class="gold">'code'</span>, <span class="gold">'sports'</span>, <span class="gold">'games'</span>, <span class="gold">'art'</span>, <span class="gold">'music'</span>, <span class="gold">'kendama'</span>
-      ]
-    &#125;
+  🏙️ location: <span class="gold">'Chicago'</span>,
+  🙃 web developer: [
+    <span class="gold">'Javascript'</span>, <span class="gold">'HTML'</span>, <span class="gold">'CSS'</span>, <span class="gold">'Angular'</span>, <span class="gold">'React'</span>, <span class="gold">'Svelte'</span>, <span class="gold">'JAMStack'</span>
+  ],
+  🎶 music: [
+    <span class="gold">'hip hop'</span>, <span class="gold">'black metal'</span>, <span class="gold">'midwest emo'</span>, <span class="gold">'acoustic'</span>, <span class="gold">'indie'</span>
+  ],
+  🥣 cereal: [
+    <span class="gold">'Golden Grahams'</span>, <span class="gold">'Life'</span>, <span class="gold">'Frosted Flakes'</span>, <span class="gold">"Oh's"</span>
+  ]
+  🎲 hobbies: [
+    <span class="gold">'code'</span>, <span class="gold">'sports'</span>, <span class="gold">'games'</span>, <span class="gold">'art'</span>, <span class="gold">'music'</span>, <span class="gold">'kendama'</span>
+  ]
+&#125;
     </code>
     </pre>
     </div>
