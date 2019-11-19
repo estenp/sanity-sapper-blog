@@ -4,12 +4,12 @@
   import { cubicOut } from "svelte/easing";
 
   export let segment;
-  let segmentTween = tweened(0, {
+  /* let segmentTween = tweened(0, {
     duration: 400,
     easing: cubicOut
   });
 
-  segmentTween.set(segment);
+  segmentTween.set(segment); */
 </script>
 
 <style lang="scss">

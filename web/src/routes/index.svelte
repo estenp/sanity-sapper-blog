@@ -75,12 +75,22 @@
     font-size: 1.1rem;
     display: block;
   }
-
+  .portfolio-slot img {
+    width: 100%;
+    transition: width 300ms ease-in-out;
+  }
   .portfolio-slot > div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+
+  .portfolio-slot:hover img{
+    width: 115%;
+
+  }
+
   /* @media (min-width: 480px) {
     h1 {
       font-size: 4em;
@@ -112,9 +122,7 @@
       <div class="portfolio-slot">
         <div>
           <a href="http://www.cfishades.com" target="_blank">
-            <img
-              src="cfilogo.png"
-              alt="Custom Fabricating Industries logo" />
+            <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
           </a>
         </div>
       </div>
