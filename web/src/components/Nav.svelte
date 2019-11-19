@@ -104,7 +104,7 @@
       </li>
       <span class="plain">,&nbsp;</span>
       <li class="brown">
-        <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
+        <a class={segment === 'about' ? 'selected' : ''} href="/about/">about</a>
       </li>
       <span class="plain">,&nbsp;</span>
       <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
@@ -113,7 +113,7 @@
         <a
           rel="prefetch"
           class={segment === 'blog' ? 'selected' : ''}
-          href="blog">
+          href="/blog/">
           blog
         </a>
       </li>
