@@ -19,9 +19,19 @@
       padding-top: 4rem;
     }
   }
-
+  .border-left {
+    padding-left: 4rem;
+    border-left: solid 1px rgb(107, 107, 107);
+  }
   .slot-container {
     padding-bottom: 4rem;
+  }
+  @media (max-width: 649px) {
+    main {
+      margin: auto;
+      width: 90vw;
+    }
+    .border-left {padding: 0; border: none;}
   }
 </style>
 

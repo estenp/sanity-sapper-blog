@@ -38,18 +38,15 @@
 
 <style lang="scss">
   @import "../../static/variables.scss";
-  section.container {
+  .container {
     /* width: 75%; */
     margin: 0 auto;
-    // display: grid;
-    // grid-template-columns: 1fr [first] 1fr [second];
-    // grid-column-gap: 10px;
     min-height: 300px;
     column-count: 2;
     column-gap: 1rem;
   }
 
-  section > div {
+  .container > div {
     margin-bottom: 10px;
     padding: 10px;
     border: solid 4px $red;
@@ -81,11 +78,6 @@
     display: block;
   }
 
-  // .portfolio-slot {
-  //   float:left;
-  //   margin-right: 1rem;
-  // }
-
   .portfolio-slot img {
     width: 100%;
     transition: width 300ms ease-in-out;
@@ -106,6 +98,11 @@
   @media (min-width: 480px) {
     h1 {
       font-size: 4em;
+    }
+  }
+  @media (max-width: 500px) {
+    .container {
+      column-count: 1;
     }
   }
 </style>

@@ -27,6 +27,7 @@
     font-size: 1.5rem;
     justify-self: start;
     display: flex;
+    flex-wrap: wrap;
   }
   h1 {
     font-size: 1.5rem;
@@ -66,6 +67,17 @@
   .operator {
     display: inline;
   }
+
+  @media (max-width: 500px) {
+    header {padding: 1rem;}
+    nav {
+      padding: 0;
+      border-left: 0;
+      .arrow {
+        padding-left: 1rem;
+      }
+    }
+  }
 </style>
 
 <header>
@@ -101,7 +113,7 @@
       </li>
     </ul>
     <span class="plain">)</span>
-    <span class="cyan operator">&nbsp;=>&nbsp;</span>
+    <span class="cyan operator arrow">&nbsp;=>&nbsp;</span>
     <span class="plain" in:fade={{ duration: 300 }}>
       {segment ? segment : 'home'}
     </span>
