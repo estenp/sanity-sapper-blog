@@ -15,20 +15,11 @@
 <style lang="scss">
   @import "../../static/variables.scss";
   header {
-    // border-bottom: 2px solid $brown;
     font-weight: 300;
     padding: 0 5em;
-    /* display: grid; */
     align-items: center;
-    /* grid-template-columns: auto auto; */
-    /* color: #ee6262; */
-    /*font-family: "Pirata One", cursive;
-    font-family: Bungee Shade;
-    font-family: "Nova Square";
-    font-family: Averia Serif Libre; */
     font-family: "Fira Code";
     padding-top: 1rem;
-    // padding-bottom: 1rem;
   }
   nav {
     padding-left: 4rem;
@@ -65,15 +56,6 @@
     display: inline-block;
   }
 
-  /* .selected::after {
-    position: absolute;
-    content: "";
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: $red;
-    display: block;
-    bottom: -1px;
-  } */
 
   a {
     text-decoration: none;

@@ -97,17 +97,17 @@
   }
 
 
-  .portfolio-slot:hover img{
+  .portfolio-slot:hover a img{
     width: 98%;
     height: 98%;
 
   }
 
-  /* @media (min-width: 480px) {
+  @media (min-width: 480px) {
     h1 {
       font-size: 4em;
     }
-  } */
+  }
 </style>
 
 <svelte:head>
@@ -133,8 +133,8 @@
       </div>
       <div class="portfolio-slot">
         <div>
-          <a href="http://www.cfishades.com" target="_blank">
-            <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
+          <a href="https://dispensio.netlify.com/" target="_blank">
+            <img src="dispensio.png" alt="dispensio" />
           </a>
         </div>
       </div>
@@ -173,10 +173,11 @@
           <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
         </div>
       </div>
+
       <div class="portfolio-slot">
         <div>
-          <a href="https://dispensio.netlify.com/" target="_blank">
-            <img src="dispensio.png" alt="dispensio" />
+          <a href="http://www.cfishades.com" target="_blank">
+            <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
           </a>
         </div>
       </div>
