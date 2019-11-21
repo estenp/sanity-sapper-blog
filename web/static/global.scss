@@ -1,8 +1,9 @@
 @import "./variables.scss";
+@import "./fonts.css";
 
 @font-face {
   font-family: "Fira Code";
-  src: local("./fonts/FiraCode-Regular.woff"), url("./fonts/FiraCode-Regular.woff") format("woff");
+  src: local("Fira Code Regular"), local("Fira Code"), local("Fira"), url("/fonts/FiraCode-Regular.woff") format("woff");
 }
 
 /* Default */
