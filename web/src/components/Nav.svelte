@@ -72,9 +72,11 @@
     header {padding: 1rem;}
     nav {
       padding: 0;
+      padding-left: 2rem;
+      padding-top: 1rem;
       border-left: 0;
       .arrow {
-        padding-left: 1rem;
+        padding-left: 2rem;
       }
     }
   }
