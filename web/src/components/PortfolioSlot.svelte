@@ -1,9 +1,15 @@
 <script>
   import Modal from "../components/Modal";
+  import { onMount } from "svelte";
+
   export let url;
   let modalVisible = false;
 
-  $: console.log(modalVisible);
+// console.log($$props.$$slots.modalContent)
+  /* onMount(() => {
+    let modal = !!($$props.$$slots.modalContent);
+    console.log(modal)
+  }) */
 </script>
 
 <style lang="scss">
@@ -23,7 +29,7 @@
     margin-left: auto;
   }
 
-  .portfolio-slot :global(a img) {
+  .portfolio-slot {
     // -webkit-transform: perspective(1px) translateZ(0);
     // transform: perspective(1px) translateZ(0);
     -webkit-transition-duration: 0.3s;
@@ -37,20 +43,23 @@
     align-items: center;
   }
 
-  .portfolio-slot:hover :global(a img) {
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
+  .portfolio-slot:hover {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
 </style>
 
 <div class="portfolio-slot">
-  <a href={url ? url : "javascript:void()"} on:click={() => (modalVisible = !modalVisible)}>
+  <a
+    href={url ? url : "javascript:void()"}
+    on:click={() => (modalVisible = !modalVisible)}
+    target={url ? "_blank" : "_self"}>
     <slot />
   </a>
 </div>
 
-{#if modal}
+<!-- {#if $$props.$$slots.modalContent} -->
 <Modal bind:isVisible={modalVisible}>
   <slot name="modalContent" />
 </Modal>
-{/if}
+<!-- {/if} -->

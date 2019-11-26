@@ -55,10 +55,6 @@
     }
   }
 
-  .col img {
-    width: 100%;
-  }
-
   #recent-blog-post h2 {
     text-align: center;
     border-bottom: solid 2px $red;
@@ -69,15 +65,6 @@
     text-align: right;
     font-size: 1.1rem;
     display: block;
-  }
-
-  .portfolio-slot img {
-    width: 100%;
-  }
-  .portfolio-slot > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   @media (min-width: 480px) {
@@ -110,52 +97,48 @@
         </section>
       </article>
     </div>
-    <PortfolioSlot url="https://dispensio.netlify.com/" let:modal={false}>
+    <PortfolioSlot url="https://dispensio.netlify.com/" >
       <img src="dispensio.png" alt="dispensio" />
     </PortfolioSlot>
+
     <PortfolioSlot>
       <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
       <img slot="modalContent" src="bass.jpg" alt="Largemouth Bass" />
     </PortfolioSlot>
-    <div class="portfolio-slot">
-      <div>
+
+    <PortfolioSlot>
         <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
+        <img slot="modalContent" src="dicetronlogo.png" alt="DiceTron logo" />
+    </PortfolioSlot>
+
+    <PortfolioSlot>
         <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
+        <img slot="modalContent" src="barnowl.jpg" alt="Barn Owl" />
+    </PortfolioSlot>
+
+    <PortfolioSlot>
         <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
+        <img slot="modalContent" src="fog2.jpg" alt="Fog at Mt. Ranier" />
+    </PortfolioSlot>
+
+    <PortfolioSlot>
         <img src="beach.jpg" alt="Beach in Oregon" />
-      </div>
-    </div>
+        <img slot="modalContent" src="beach.jpg" alt="Beach in Oregon" />
+    </PortfolioSlot>
 
-    <div class="portfolio-slot">
-      <div>
+    <PortfolioSlot>
         <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
-      </div>
-    </div>
+        <img slot="modalContent" style="background: #eaeaea" src="head.png" alt="estenpatrick.com logo" />
+    </PortfolioSlot>
 
-    <div class="portfolio-slot">
-      <div>
-        <a href="http://www.cfishades.com" target="_blank">
-          <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
-        </a>
-      </div>
-    </div>
-    <div class="portfolio-slot">
-      <div>
+    <PortfolioSlot url="http://www.cfishades.com">
+      <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
+    </PortfolioSlot>
+
+    <PortfolioSlot>
         <img src="ironworks.jpg" alt="Iron Works" />
-      </div>
-    </div>
+        <img slot="modalContent" src="ironworks.jpg" alt="Iron Works" />
+    </PortfolioSlot>
 
   </section>
 </RouteTransition>

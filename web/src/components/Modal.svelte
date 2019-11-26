@@ -2,10 +2,8 @@
   import { transition, fade } from "svelte/transition";
   export let isVisible;
 
-  const handleKeydown = (e) => (e.keyCode === 27) && closeModal();
-  const closeModal = () => isVisible = false;
-
-
+  const handleKeydown = e => e.keyCode === 27 && closeModal();
+  const closeModal = () => (isVisible = false);
 </script>
 
 <style lang="scss">
@@ -30,6 +28,7 @@
       transform: translate(-50%);
       z-index: 3;
       height: 100vh;
+      box-shadow: 0px 10px 10px black;
       :global(img) {
         height: 100%;
       }
@@ -45,7 +44,7 @@
 
         border: solid 2px $red;
         text-weight: bold;
-        background: inherit;
+        background: #eaeaea;
         color: black;
       }
       .close-button:active,
@@ -57,12 +56,12 @@
   }
 </style>
 
-<svelte:window on:keydown={handleKeydown}/>
+<svelte:window on:keydown={handleKeydown} />
 
 {#if isVisible}
-  <div transition:fade={{duration: 100}} class="modal">
+  <div transition:fade={{ duration: 100 }} class="modal">
 
-    <div transition:fade={{duration: 100}} class="overlay" />
+    <div transition:fade={{ duration: 100 }} class="overlay" />
 
     <div class="container">
       <button
