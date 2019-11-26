@@ -116,6 +116,13 @@ li {
   margin-bottom: 0.5rem;
 }
 
+pre {
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+word-wrap: break-word;
+text-align: justify;
+}
+
 /* code {
   font-family: menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);

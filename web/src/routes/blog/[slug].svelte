@@ -134,9 +134,11 @@
 <h1>{post.title}</h1>
 
 <div class="content">
-  <img
+  {#if post.mainImage}
+    <img
     class="main-image"
     src={urlFor(post.mainImage).url()}
     alt={post.mainImage.alt} />
+  {/if}
   {@html post.body}
 </div>

@@ -38,11 +38,6 @@
 
 </script>
 
-<style>
-  pre {
-    font-size: 1.3rem;
-  }
-</style>
 
 <svelte:head>
   <title>About</title>

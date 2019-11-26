@@ -18,12 +18,7 @@
           blocks: post.excerpt,
           serializers,
           ...client.clientConfig
-        }) /* ,
-        body: blocksToHtml({
-          blocks: post.body,
-          serializers,
-          ...client.clientConfig
-        }) */
+        })
       }
     };
   }
@@ -31,6 +26,7 @@
 
 <script>
   import RouteTransition from "../components/RouteTransition";
+  import PortfolioSlot from "../components/PortfolioSlot";
   import urlFor from "../lib/urlFor";
   export let post;
   // console.log(post);
@@ -39,24 +35,21 @@
 <style lang="scss">
   @import "../../static/variables.scss";
   .container {
-    /* width: 75%; */
     margin: 0 auto;
     min-height: 300px;
     column-count: 2;
     column-gap: 1rem;
   }
 
-  .container > div {
+  .container > * {
     margin-bottom: 10px;
     padding: 10px;
     border: solid 4px $red;
     border-radius: 5px;
-    // background: #fff;
   }
 
   #recent-blog-post {
     min-height: 200px;
-    /* background: white; */
     img {
       width: 100%;
     }
@@ -80,19 +73,11 @@
 
   .portfolio-slot img {
     width: 100%;
-    transition: width 300ms ease-in-out;
   }
   .portfolio-slot > div {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-
-  .portfolio-slot:hover a img{
-    width: 98%;
-    height: 98%;
-
   }
 
   @media (min-width: 480px) {
@@ -111,85 +96,66 @@
   <title>Esten Patrick</title>
 </svelte:head>
 <RouteTransition>
+
   <section class="container">
-    <!-- <div class="col"> -->
-      <div id="recent-blog-post">
-        <article>
-          <h2>{post.title}</h2>
-
-          <img
-            src={urlFor(post.mainImage).width(500)}
-            alt={post.mainImage.alt} />
-          <section>
-            {@html post.excerpt}
-            <a rel="prefetch" href="blog/{post.slug.current}">
-              Read: {post.title}
-            </a>
-          </section>
-        </article>
-      </div>
-      <div class="portfolio-slot">
-        <div>
-          <a href="https://dispensio.netlify.com/" target="_blank">
-            <img src="dispensio.png" alt="dispensio" />
+    <div id="recent-blog-post">
+      <article>
+        <h2>{post.title}</h2>
+        <img src={urlFor(post.mainImage).width(500)} alt={post.mainImage.alt} />
+        <section>
+          {@html post.excerpt}
+          <a rel="prefetch" href="blog/{post.slug.current}">
+            Read: {post.title}
           </a>
-        </div>
+        </section>
+      </article>
+    </div>
+    <PortfolioSlot url="https://dispensio.netlify.com/" let:modal={false}>
+      <img src="dispensio.png" alt="dispensio" />
+    </PortfolioSlot>
+    <PortfolioSlot>
+      <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
+      <img slot="modalContent" src="bass.jpg" alt="Largemouth Bass" />
+    </PortfolioSlot>
+    <div class="portfolio-slot">
+      <div>
+        <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
       </div>
-      <div class="portfolio-slot">
-        <div>
-          <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
-        </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
       </div>
-      <div class="portfolio-slot">
-        <div>
-          <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
-        </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
       </div>
-      <div class="portfolio-slot">
-        <div>
-          <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
-        </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="beach.jpg" alt="Beach in Oregon" />
       </div>
+    </div>
 
-    <!-- </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
+      </div>
+    </div>
 
-    <div class="col"> -->
-      <div class="portfolio-slot">
-        <div>
-          <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
-        </div>
+    <div class="portfolio-slot">
+      <div>
+        <a href="http://www.cfishades.com" target="_blank">
+          <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
+        </a>
       </div>
-      <div class="portfolio-slot">
-        <div>
-          <img src="beach.jpg" alt="Beach in Oregon" />
-        </div>
+    </div>
+    <div class="portfolio-slot">
+      <div>
+        <img src="ironworks.jpg" alt="Iron Works" />
       </div>
+    </div>
 
-      <div class="portfolio-slot">
-        <div>
-          <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
-        </div>
-      </div>
-
-      <div class="portfolio-slot">
-        <div>
-          <a href="http://www.cfishades.com" target="_blank">
-            <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
-          </a>
-        </div>
-      </div>
-      <div class="portfolio-slot">
-        <div>
-          <img src="ironworks.jpg" alt="Iron Works" />
-        </div>
-      </div>
-
-    <!-- </div> -->
-    <!-- <strong>
-    Go to
-    <a href="/blog">/blog</a>
-    to see content loaded from
-    <a href="https://www.sanity.io">Sanity</a>
-  </strong> -->
   </section>
 </RouteTransition>
