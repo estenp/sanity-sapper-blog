@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
 
   export let url;
+  export let modal;
   let modalVisible = false;
 
 // console.log($$props.$$slots.modalContent)
@@ -52,14 +53,14 @@
 <div class="portfolio-slot">
   <a
     href={url ? url : "javascript:void()"}
-    on:click={() => (modalVisible = !modalVisible)}
+    on:click={() => {modalVisible = !modalVisible}}
     target={url ? "_blank" : "_self"}>
     <slot />
   </a>
 </div>
 
-<!-- {#if $$props.$$slots.modalContent} -->
+{#if modal === true}
 <Modal bind:isVisible={modalVisible}>
   <slot name="modalContent" />
 </Modal>
-<!-- {/if} -->
+{/if}

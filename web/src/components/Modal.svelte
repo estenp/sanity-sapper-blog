@@ -24,13 +24,16 @@
     }
     .container {
       position: absolute;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%);
+      transform: translate(-50%, -50%);
       z-index: 3;
-      height: 100vh;
-      box-shadow: 0px 10px 10px black;
+    //   width: 100vw;
+    //   height: 100vh;
       :global(img) {
-        height: 100%;
+        box-shadow: 0px 10px 10px black;
+        max-height: 100%;
+        max-width: 100%;
       }
       .close-button {
         cursor: pointer;

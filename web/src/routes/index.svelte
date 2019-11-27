@@ -101,32 +101,32 @@
       <img src="dispensio.png" alt="dispensio" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
       <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
       <img slot="modalContent" src="bass.jpg" alt="Largemouth Bass" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
         <img slot="modalContent" src="dicetronlogo.png" alt="DiceTron logo" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
         <img slot="modalContent" src="barnowl.jpg" alt="Barn Owl" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
         <img slot="modalContent" src="fog2.jpg" alt="Fog at Mt. Ranier" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="beach.jpg" alt="Beach in Oregon" />
         <img slot="modalContent" src="beach.jpg" alt="Beach in Oregon" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
         <img slot="modalContent" style="background: #eaeaea" src="head.png" alt="estenpatrick.com logo" />
     </PortfolioSlot>
@@ -135,7 +135,7 @@
       <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
     </PortfolioSlot>
 
-    <PortfolioSlot>
+    <PortfolioSlot modal={true}>
         <img src="ironworks.jpg" alt="Iron Works" />
         <img slot="modalContent" src="ironworks.jpg" alt="Iron Works" />
     </PortfolioSlot>
