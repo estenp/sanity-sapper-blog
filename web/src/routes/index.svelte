@@ -108,7 +108,7 @@
 
     <PortfolioSlot modal={true}>
         <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
-        <img slot="modalContent" src="dicetronlogo.png" alt="DiceTron logo" />
+        <img slot="modalContent" src="dicescreen.png" alt="DiceTron logo" />
     </PortfolioSlot>
 
     <PortfolioSlot modal={true}>
@@ -128,7 +128,7 @@
 
     <PortfolioSlot modal={true}>
         <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
-        <img slot="modalContent" style="background: #eaeaea" src="head.png" alt="estenpatrick.com logo" />
+        <img slot="modalContent" style="background: #eaeaea" src="epcom.png" alt="estenpatrick.com screenshot" />
     </PortfolioSlot>
 
     <PortfolioSlot url="http://www.cfishades.com">
