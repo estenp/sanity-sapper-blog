@@ -97,47 +97,89 @@
         </section>
       </article>
     </div>
-    <PortfolioSlot url="https://dispensio.netlify.com/" >
+    <PortfolioSlot>
       <img src="dispensio.png" alt="dispensio" />
+      <div slot="modalContent">
+        <img src="dispensio-screen.png" alt="dispensio" />
+        <p>
+          Dispensio is a JAMStack blog with an online ordering system. It is
+          built with GatsbyJS and uses Sanity for content management and
+          order/product data storage.
+        </p>
+        <ul>
+          <li>
+            <a href="https://dispensio.netlify.com/">
+              https://dispensio.netlify.com/
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/estenp/dispensio">Github</a>
+          </li>
+        </ul>
+      </div>
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
+    <PortfolioSlot>
       <img src="bass.jpg" alt="Largemouth Bass" style="width: 75%" />
       <img slot="modalContent" src="bass.jpg" alt="Largemouth Bass" />
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
-        <img slot="modalContent" src="dicescreen.png" alt="DiceTron logo" />
+    <PortfolioSlot>
+      <img src="dicetronlogo.png" alt="DiceTron logo" style="width: 25%" />
+      <div slot="modalContent">
+        <img src="dicescreen.png" alt="DiceTron logo" />
+        <p>
+          DiceTron was a mobile first online game based upon the classic
+          bluffing game: Liar's Dice. It was built on JQuery Mobile and
+          PHP/MySQL.
+        </p>
+      </div>
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
-        <img slot="modalContent" src="barnowl.jpg" alt="Barn Owl" />
+    <PortfolioSlot>
+      <img src="barnowl.jpg" alt="Barn Owl" style="width: 75%" />
+      <img slot="modalContent" src="barnowl.jpg" alt="Barn Owl" />
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
-        <img slot="modalContent" src="fog2.jpg" alt="Fog at Mt. Ranier" />
+    <PortfolioSlot>
+      <img src="fog2.jpg" alt="Fog at Mt. Ranier" />
+      <img slot="modalContent" src="fog2.jpg" alt="Fog at Mt. Ranier" />
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="beach.jpg" alt="Beach in Oregon" />
-        <img slot="modalContent" src="beach.jpg" alt="Beach in Oregon" />
+    <PortfolioSlot>
+      <img src="beach.jpg" alt="Beach in Oregon" />
+      <img slot="modalContent" src="beach.jpg" alt="Beach in Oregon" />
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
-        <img slot="modalContent" style="background: #eaeaea" src="epscreen.png" alt="estenpatrick.com screenshot" />
+    <PortfolioSlot>
+      <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
+      <div slot="modalContent">
+        <img src="epscreen.png" alt="estenpatrick.com screenshot" />
+        <p>This was the very first portfolio site I ever made.</p>
+      </div>
     </PortfolioSlot>
 
-    <PortfolioSlot url="http://www.cfishades.com">
+    <PortfolioSlot>
       <img src="cfilogo.png" alt="Custom Fabricating Industries logo" />
+      <div slot="modalContent">
+        <img src="cfi-screen.png" alt="cfishades.com screenshot" />
+        <p>Local window treatment company, CFI, was looking for an updated website. I built this using GatsbyJS with content management via Netlify CMS.</p>
+        <ul>
+          <li>
+            <a href="https://www.cfishades.com/">
+              cfishades.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/dhemmercfi/cfishades">Github</a>
+          </li>
+        </ul>
+      </div>
     </PortfolioSlot>
 
-    <PortfolioSlot modal={true}>
-        <img src="ironworks.jpg" alt="Iron Works" />
-        <img slot="modalContent" src="ironworks.jpg" alt="Iron Works" />
+    <PortfolioSlot>
+      <img src="ironworks.jpg" alt="Iron Works" />
+      <img slot="modalContent" src="ironworks.jpg" alt="Iron Works" />
     </PortfolioSlot>
 
   </section>

@@ -59,8 +59,8 @@
   </a>
 </div>
 
-{#if modal === true}
+<!-- {#if modal === true} -->
 <Modal bind:isVisible={modalVisible}>
   <slot name="modalContent" />
 </Modal>
-{/if}
+<!-- {/if} -->

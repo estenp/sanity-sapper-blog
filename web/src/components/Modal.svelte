@@ -3,7 +3,7 @@
   export let isVisible;
 
   const handleKeydown = e => e.keyCode === 27 && closeModal();
-  const closeModal = () => isVisible = false;
+  const closeModal = () => (isVisible = false);
 </script>
 
 <style lang="scss">
@@ -28,12 +28,20 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
-    //   width: 100vw;
-    //   height: 100vh;
+      color: $background;
+      background-color: #eaeaea;
+      box-shadow: 0px 10px 10px black;
+      //   width: 100vw;
+      //   height: 100vh;
       :global(img) {
-        box-shadow: 0px 10px 10px black;
         max-height: 100%;
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      :global(div) {
+        margin: 1rem;
       }
       .close-button {
         cursor: pointer;
