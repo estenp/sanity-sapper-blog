@@ -3,7 +3,7 @@
   export let isVisible;
 
   const handleKeydown = e => e.keyCode === 27 && closeModal();
-  const closeModal = () => (isVisible = false);
+  const closeModal = () => isVisible = false;
 </script>
 
 <style lang="scss">

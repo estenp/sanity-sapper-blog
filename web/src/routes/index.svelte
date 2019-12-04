@@ -128,7 +128,7 @@
 
     <PortfolioSlot modal={true}>
         <img src="head.png" alt="estenpatrick.com logo" style="width: 75%" />
-        <img slot="modalContent" style="background: #eaeaea" src="epcom.png" alt="estenpatrick.com screenshot" />
+        <img slot="modalContent" style="background: #eaeaea" src="epscreen.png" alt="estenpatrick.com screenshot" />
     </PortfolioSlot>
 
     <PortfolioSlot url="http://www.cfishades.com">

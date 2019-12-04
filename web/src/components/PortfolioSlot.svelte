@@ -52,7 +52,7 @@
 
 <div class="portfolio-slot">
   <a
-    href={url ? url : "javascript:void()"}
+    href={url ? url : "javascript:void(0)"}
     on:click={() => {modalVisible = !modalVisible}}
     target={url ? "_blank" : "_self"}>
     <slot />
