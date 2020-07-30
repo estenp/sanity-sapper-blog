@@ -42,8 +42,9 @@
   @import "../../static/variables.scss";
   #catsContainer {
     display: inline-flex;
-    width: 50%;
-    justify-content: space-between;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-bottom: 2rem;
     font-size: 0.8rem;
   }
@@ -54,6 +55,8 @@
     border: solid 2px $red;
     border-radius: 5px;
     padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     color: $plain;
   }
   .tag.active {

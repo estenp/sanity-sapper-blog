@@ -44,8 +44,17 @@
 </script>
 
 <style>
+  li {
+    display: flex;
+  }
   li a {
     margin-left: 0.3rem;
+    flex: 2;
+  }
+  .post-date {
+    text-align: right;
+    flex: 1;
+    max-width: 100px;
   }
 </style>
 
@@ -71,7 +80,7 @@
       <li
       in:fly|local={{ y: 100, duration: 300 }}
       out:fly|local={{ y: 100, duration: 300 }}>
-        {formatDate(post.publishedAt)} |
+        <span class="post-date">{formatDate(post.publishedAt)} |</span>
         <a rel="prefetch" href="blog/{post.slug.current}">{post.title}</a>
 
       </li>
