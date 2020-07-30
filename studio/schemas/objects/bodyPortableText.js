@@ -50,7 +50,11 @@ export default {
       options: {hotspot: true}
     },
     {
-      type: 'code'
+      type: 'code',
+      options: {
+        language: 'js',
+
+      }
     }
   ]
 }
