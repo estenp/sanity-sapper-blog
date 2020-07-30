@@ -64,6 +64,9 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
   */
+  .content {
+
+  }
 
   .content :global(h2) {
     font-size: 1.4em;
@@ -96,7 +99,9 @@
 
   .content :global(img) {
     display: block;
-    max-width: 100%;
+    /* max-width: 100%; */
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .content :global(figure) {
@@ -105,6 +110,12 @@
 
   .content :global(ul) {
     line-height: 1.5;
+    list-style: square;
+  }
+
+  .content :global(li > ul) {
+    line-height: 1.5;
+    list-style: circle;
   }
 
   .content :global(li) {
@@ -113,7 +124,6 @@
 
   .main-image {
     margin: 20px 0;
-    padding: 5px;
     border: solid 4px white;
     border-radius: 5px;
   }
