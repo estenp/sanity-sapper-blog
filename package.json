@@ -21,6 +21,8 @@
     "npm": "^6.14.7"
   },
   "dependencies": {
-    "@sanity/image-url": "^0.140.19"
+    "@sanity/image-url": "^0.140.19",
+    "sapper": "^0.27.16",
+    "svelte": "^3.24.0"
   }
 }
