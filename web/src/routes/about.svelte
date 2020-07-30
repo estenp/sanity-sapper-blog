@@ -70,7 +70,7 @@
     <span class="gold">'Golden Grahams'</span>, <span class="gold">'Life'</span>, <span class="gold">'Frosted Flakes'</span>, <span class="gold">"Oh's"</span>
   ]
   🎲 hobbies: [
-    <span class="gold">'code'</span>, <span class="gold">'sports'</span>, <span class="gold">'games'</span>, <span class="gold">'art'</span>, <span class="gold">'music'</span>, <span class="gold">'kendama'</span>
+    <span class="gold">'code'</span>, <span class="gold">'sports'</span>, <span class="gold">'games'</span>, <span class="gold">'art'</span>, <span class="gold">'music'</span>, <span class="gold">'outdoors'</span>
   ]
 &#125;
     </code>
