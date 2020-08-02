@@ -40,6 +40,10 @@
 
 <style lang="scss">
   @import "../../static/variables.scss";
+  #selectDeselectContainer button.tag {
+    display: block;
+    background-color: transparent;
+  }
   #catsContainer {
     display: inline-flex;
     max-width: 100vw;
@@ -66,7 +70,12 @@
   }
 </style>
 
+  <section id="selectDeselectContainer">
+    <button class="tag">Select All</button>
+    <button class="tag">Deselect All</button>
+  </section>
 <div id="catsContainer">
+  <section id="tagsContainer">
   {#each categories as cat}
     <button
       on:click={() => handleTagClick(cat._id)}
@@ -75,4 +84,5 @@
       {cat.title}
     </button>
   {/each}
+  </section>
 </div>
