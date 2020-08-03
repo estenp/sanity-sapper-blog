@@ -36,13 +36,27 @@
     categories = categories;
     dispatchActiveTags(categories);
   };
+
+  const selectAll = () => {
+    cats.forEach(cat => (cat.active = true));
+    categories = categories;
+    dispatchActiveTags(categories);
+  };
+
+  const deSelectAll = () => {
+    cats.forEach(cat => (cat.active = false));
+    categories = categories;
+    dispatchActiveTags(categories);
+  };
 </script>
 
 <style lang="scss">
   @import "../../static/variables.scss";
-  #selectDeselectContainer button.tag {
-    display: block;
-    background-color: transparent;
+  #selectDeselectContainer {
+    margin-bottom: 0.3em;
+    .tag {
+      background-color: transparent;
+    }
   }
   #catsContainer {
     display: inline-flex;
@@ -70,19 +84,19 @@
   }
 </style>
 
-  <section id="selectDeselectContainer">
-    <button class="tag">Select All</button>
-    <button class="tag">Deselect All</button>
-  </section>
+<section id="selectDeselectContainer">
+  <button class="tag" on:click={() => selectAll()}>Select All</button>
+  <button class="tag" on:click={() => deSelectAll()}>Deselect All</button>
+</section>
 <div id="catsContainer">
   <section id="tagsContainer">
-  {#each categories as cat}
-    <button
-      on:click={() => handleTagClick(cat._id)}
-      class="tag"
-      class:active={cat.active}>
-      {cat.title}
-    </button>
-  {/each}
+    {#each categories as cat}
+      <button
+        on:click={() => handleTagClick(cat._id)}
+        class="tag"
+        class:active={cat.active}>
+        {cat.title}
+      </button>
+    {/each}
   </section>
 </div>
