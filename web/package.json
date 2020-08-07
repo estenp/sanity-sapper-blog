@@ -19,7 +19,7 @@
     "compression": "^1.7.4",
     "groq": "^0.140.0",
     "polka": "^0.5.2",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "sirv": "^0.4.6"
   },
   "devDependencies": {
